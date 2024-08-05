@@ -1,14 +1,13 @@
 #include <iostream>
 using namespace std;
 
-#include "TaskManager.h"
+#include "Application.h"
 
 int main()
 {
-  cout << "Welcome, this a Task Management System" << endl;
+  cout << "Welcome, this a Task Management System using my C++ skill" << endl;
 
-  TaskManager taskManager;
-  taskManager.run();
+  run();
 
   return 0;
 }

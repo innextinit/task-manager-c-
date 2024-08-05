@@ -59,12 +59,6 @@ void Person::UpdateLastName(int ID, string last_name)
   }
 };
 
-Person Person::GetPersonDetails(int ID) const
-{
-  // connect to the DB or something to find the ID, if user found then return
-  return *this;
-}
-
 string Person::GetFirstName(int ID) const
 {
   return first_name;

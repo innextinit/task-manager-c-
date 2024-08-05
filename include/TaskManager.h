@@ -4,17 +4,25 @@
 #include <string>
 using namespace std;
 
-class TaskManager {
-  private:
-    int id;
-    string description;
-  public:
-    static int lastID;
-    void run();
-    void addTask(const string& description);
-    void listTasks();
-    void updateTask(const string& id, const string& description);
-    void removeTask(const string &id);
+class TaskManager
+{
+protected:
+  static int TaskID;
+  string description;
+  string due_date;
+  string status;
+  int UserID;
+
+public:
+  TaskManager();
+  TaskManager(string description);
+  ~TaskManager();
+
+  void listTasks();
+  void updateTask(int ID, string description, string due_date, string status);
+  void updateDescription(int ID, string description);
+  void updateDueDate(int ID, string due_date);
+  void updateStatus(int ID, string status);
 };
 
 #endif

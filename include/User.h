@@ -5,21 +5,24 @@
 using namespace std;
 
 #include "Account.h"
+#include "Person.h"
 
-class User : public Account
+class User
 {
 protected:
+  Person person;
+  Account account;
   static int UserID;
-  int AccountID;
 
 public:
+  User();
   User(string first_name, string last_name, string username, string email, string password);
   ~User();
 
-  User GetUserDetails(int ID);
-
-  User Login(string email, string password);
+  User GetUserDetails(int ID) const;
+  User Login(string email, string password) const;
   void Logout(int ID);
+  void printDetails(User const user) const;
 };
 
 #endif

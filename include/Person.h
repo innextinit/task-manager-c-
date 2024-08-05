@@ -12,6 +12,7 @@ protected:
   static int PersonID;
 
 public:
+  Person();
   Person(string first_name, string last_name);
   ~Person();
 
@@ -19,7 +20,6 @@ public:
   void UpdateFirstName(int ID, string first_name);
   void UpdateLastName(int ID, string last_name);
 
-  Person GetPersonDetails(int ID) const;
   string GetFirstName(int ID) const;
   string GetLastName(int ID) const;
 };
